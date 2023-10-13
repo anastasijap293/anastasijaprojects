@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Surprise Cat</title>
+    <style>
+        body {
+            background-color: #cad3ca;
+            text-align: center;
+        }
+
+        #catButton {
+            background-color: #92ab87;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #closeButton {
+            background-color:#92ab87  ;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1> Click the cat button :)</h1>
+    <button id="catButton">Cat</button>
+    <div id="catImageContainer" style="display: none;">
+        <img id="catImage" src="">
+        <button id="closeButton">Home</button>
+    </div>
+
+    <script>
+        var catButton = document.getElementById("catButton");
+        var catImageContainer = document.getElementById("catImageContainer");
+        var catImage = document.getElementById("catImage");
+        var closeButton = document.getElementById("closeButton");
+
+        catButton.addEventListener("click", function() {
+            catImage.src = "file:///C:/Users/anast/Downloads/happy%20cat.jpg";
+            catImageContainer.style.display = "block";
+        });
+
+        closeButton.addEventListener("click", function() {
+            catImageContainer.style.display = "none";
+        });
+    </script>
+</body>
+</html>
+
+
+
